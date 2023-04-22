@@ -1,22 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-import Header from './components/Header'
-import Login from './components/Login'
-import Registration from './components/Registration'
+import React from "react";
+import NavBar from "./components/NavBar";
+import TodoTable from "./components/TodoTable";
 
-function App() {
+const App = () => {
   return (
     <>
-      <BrowserRouter>  {/*en}able single page application*/}
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/singup' element={<Registration />} />
-        </Routes>
-      </BrowserRouter>
+      <NavBar />
+      <TodoTable />
     </>
   );
-}
+};
 
 export default App;
